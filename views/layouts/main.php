@@ -9,6 +9,7 @@ use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
+use app\models\User;
 
 AppAsset::register($this);
 
@@ -32,17 +33,19 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <header id="header">
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
+        'brandLabel' => 'Нарушениям.Нет',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => ['class' => 'navbar-expand-md navbar-dark bg-dark fixed-top']
     ]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            ['label' => 'Регистрация', 'url' => ['/site/register']],
+            ['label' => 'Главная', 'url' => ['/site/index']],
+            Yii::$app->user->isGuest
+                ? ['label' => 'Регистрация', 'url' => ['/site/register']]
+                : ['label' => 'Мои записи', 'url' => ['/report/index']],
+            (!Yii::$app->user->isGuest && !User::getInstance()->isAdmin())
+                ? ['label' => 'Создать запись', 'url' => ['/report/create']] : '',
             Yii::$app->user->isGuest
                 ? ['label' => 'Вход', 'url' => ['/site/login']]
                 : '<li class="nav-item">'
@@ -72,8 +75,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <footer id="footer" class="mt-auto py-3 bg-light">
     <div class="container">
         <div class="row text-muted">
-            <div class="col-md-6 text-center text-md-start">&copy; My Company <?= date('Y') ?></div>
-            <div class="col-md-6 text-center text-md-end"><?= Yii::powered() ?></div>
+            <div class="col-md-6 text-center text-md-start">&copy; Нарушениям.Нет </div>
+            <div class="col-md-6 text-center text-md-end"><?= date('Y') ?></div>
         </div>
     </div>
 </footer>
