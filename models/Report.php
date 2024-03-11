@@ -47,10 +47,10 @@ class Report extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'number' => 'Number',
-            'description' => 'Description',
+            'number' => 'Номер',
+            'description' => 'Нарушение',
             'user_id' => 'User ID',
-            'status_id' => 'Status ID',
+            'status' => 'Статус',
         ];
     }
 

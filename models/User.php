@@ -20,6 +20,10 @@ use Yii;
  */
 class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
 {
+    public function __toString()
+    {
+        return $this->login;
+    }
     /**
      * {@inheritdoc}
      */
@@ -147,5 +151,13 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     public function validatePassword($password)
     {
         return $this->password === $password;
+    }
+    public function isAdmin() 
+    {
+        return $this->role_id == Role::ADMIN_ROLE_ID;
+    }
+    public static function getInstance(): User|null
+    {
+        return Yii::$app->user->identity;
     }
 }
