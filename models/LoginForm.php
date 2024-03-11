@@ -27,7 +27,7 @@ class LoginForm extends Model
     {
         return [
             // username and password are both required
-            [['username', 'password'], 'required'],
+            [['username', 'password'], 'required', 'message'=> 'Поля не заполнены'],
             // rememberMe must be a boolean value
             ['rememberMe', 'boolean'],
         ];
@@ -37,7 +37,7 @@ class LoginForm extends Model
     {
         return [
             'rememberMe' => 'Запомнить меня',
-            'login' => 'Логин',
+            'username' => 'Логин',
             'password' => 'Пароль',
         ];
     }
@@ -53,6 +53,7 @@ class LoginForm extends Model
                 return Yii::$app->user->login($user, $this->rememberMe ? 3600*24*30 : 0);
             }
         }
+        $this->addError('password', 'Пароль введён некорректно');
         return false;
     }
 
