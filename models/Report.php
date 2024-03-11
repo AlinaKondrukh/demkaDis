@@ -32,6 +32,7 @@ class Report extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['number', 'description'], 'required', 'message' => 'Поле не заполнено'],
             [['description'], 'string'],
             [['user_id', 'status_id'], 'integer'],
             [['number'], 'string', 'max' => 127],
