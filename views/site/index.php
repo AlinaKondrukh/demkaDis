@@ -2,52 +2,59 @@
 
 /** @var yii\web\View $this */
 
-$this->title = 'My Yii Application';
+$this->title = 'Правонарушений.Нет';
 ?>
 <div class="site-index">
+<main>
+    <h1 align="center" class="h1">Правонарушений.нет</h1>
+    <hr class="featurette-divider">
 
-    <div class="jumbotron text-center bg-transparent mt-5 mb-5">
-        <h1 class="display-4">Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="https://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4 mb-3">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-outline-secondary" href="https://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-outline-secondary" href="https://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-outline-secondary" href="https://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="h2" align="center">О нас</h2>
+        <div class="lead">
+            <p align="justify">Автоматизированная система «Правонарушений.Нет» создана в 2023 году. В 2024 году она выполнила модернизацию системы. «Правонарушений.Нет» ведет учет правонарушителей и правонарушений, формируя единую общегородскую базу данных по административным правонарушениям на территории Санкт‑Петербурга.</p>
+            <ul>    
+                <ol type="1">Повышение качества (достоверности, оперативности предоставления и полноты) данных об административных правонарушениях.</ol>
+                <ol type="2">Создание единой централизованной системы учета административных правонарушений.</ol>
+                <ol type="3">Сокращение времени подготовки документов, выявление фактов повторных административных правонарушений.</ol>
+                <ol type="4">Снижение трудоемкости ведения учета, в том числе за счет сокращения количества ручных операций и автоматизации процесса административного делопроизводства.</ol>
+            </u>
         </div>
-
     </div>
+      <div class="col-md-5 order-md-1">
+      <img class="bd-placeholder-img img-a" src="/images/pic.png" alt="фото">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <h1 align="center" class="h3">Результаты</h1>
+  <div class="container marketing" align="center">
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img img-krug" src="/images/1.png" alt="фото">
+        
+        <h2>Межведомственное взаимодействие</h2>
+        <p> — обеспечена возможность ввода первичных данных сотрудниками Комитета по вопросам законности, правопорядка и безопасности и последующая работа с созданной информацией секретарями административной комиссии.</p>
+      </div>
+      <div class="col-lg-4">
+      <img class="bd-placeholder-img img-krug" src="/images/2.png" alt="фото">
+
+        <h2>Помощь в принятии решений</h2>
+        <p> — реализованы оповещения о множественных нарушениях иностранных граждан и проверка повторности совершения административных правонарушений конкретным нарушителем с просмотром всех его нарушений.</p>
+      </div>
+      <div class="col-lg-4">
+      <img class="bd-placeholder-img img-krug" src="/images/3.png" alt="фото">
+
+        <h2>Статистика и аналитика</h2>
+        <p> — доступно создание отчетов различной конфигурации, в том числе подробных аналитических отчетов на общегородском уровне. Кроме того, можно получить свод информации по штрафам: постатейно или по типам нарушителей с помощью настраиваемого экспорта данных правонарушений по предлагаемым параметрам.</p>
+      </div>
+    </div>
+
+
+    <hr class="featurette-divider">
+
+  </div><!-- /.container -->
+</main>
 </div>
